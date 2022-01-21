@@ -1,27 +1,26 @@
 import React, { Component } from 'react'
 
-// var myT;
 
 export default class TestComponent extends Component {
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
-        this.state = { 
+        this.state = {
             name: "Halit",
             color: "blue",
             count: 0,
-         };
-         console.log("Hello from TestComponent constructor")
-      }
+        };
+        console.log("Hello from TestComponent constructor")
+    }
 
-    static getDerivedStateFromProps(props, state){
+    static getDerivedStateFromProps(props, state) {
         console.log("Hello from TestComponent getDerivedStateFromProps")
         // console.log("Props: ", props)
         console.log("state: ", state)
         return null
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log("Hello from TestComponent componentDidMount")
         // console.log(this.state)
         // myT = setTimeout(() => {
@@ -29,7 +28,7 @@ export default class TestComponent extends Component {
         // }, 3000)
     }
 
-    shouldComponentUpdate(){
+    shouldComponentUpdate() {
         console.log("ShouldComponentUpdate!....")
         return this.state.count < 3 ? true : false
     }
@@ -37,11 +36,11 @@ export default class TestComponent extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         // Typical usage (don't forget to compare props):
         console.log("TestComp componentDidUpdate")
-        console.log("PrevProps: ",prevProps)
-        console.log("PrevState: ",prevState)
-      }
+        console.log("PrevProps: ", prevProps)
+        console.log("PrevState: ", prevState)
+    }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         console.log("component GÜLE GÜLE...")
         // clearTimeout(myT)
     }
